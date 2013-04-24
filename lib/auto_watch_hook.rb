@@ -9,6 +9,7 @@ class AutoWatchHook < Redmine::Hook::Listener
   end
 
   def controller_issues_new_before_save(context = {})
+    add_current_user(context[:issue])
     add_assignee(context[:issue])
   end
 
