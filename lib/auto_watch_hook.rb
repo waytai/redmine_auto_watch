@@ -19,6 +19,7 @@ class AutoWatchHook < Redmine::Hook::Listener
 
     add_current_user(issue)
     add_assignee(issue)
+    add_assigned_was(issue)
   end
 
   private
